@@ -27,3 +27,6 @@ https://github.com/WhiteWinterWolf/wwwolf-php-webshell
 
 https://github.com/pentestmonkey/php-reverse-shell
 
+# Wordlists
+
+https://github.com/danielmiessler/SecLists
